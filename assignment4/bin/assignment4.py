@@ -21,7 +21,13 @@ parser.add_argument('-a', '--anim', help="Enter a list of animation names")
 args = parser.parse_args()
 
 from functools import partial
+import logging
+logger = logging.getLogger(__name__)
 
+FORMAT = "[%(asctime)s][%(filename)s][%(levelname)s] %(message)s"
+logging.basicConfig(filename='batch_import_log.txt',
+                    level=logging.INFO, 
+                    format=FORMAT)
 
 def importSave():
     
