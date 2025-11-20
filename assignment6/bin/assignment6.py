@@ -102,8 +102,6 @@ def importSave():
     
     #metadata export
         metadata = {
-            "expUser": name,
-            "projName": proj,
             "expAnimName": animation,
             "expTime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), #year, month, day, hour:minute:second
             "expPath": out_path,
